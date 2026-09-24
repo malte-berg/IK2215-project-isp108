@@ -1,0 +1,37 @@
+$ORIGIN isp108.lab.
+$TTL 86400
+@   IN  SOA ns.isp108.lab. admin.isp108.lab. (
+            2026092101 ; Serial
+            3600       ; Refresh
+            1800       ; Retry
+            604800     ; Expire
+            86400 )    ; Minimum TTL
+    IN  NS  ns.isp108.lab.
+
+; Servers
+ns      IN  A   1.108.1.2
+www     IN  A   1.108.1.4
+dhcpd   IN  A   1.108.1.3
+
+; Router Interfaces
+as1.r1      IN  A   1.0.0.5
+r1          IN  A   1.108.0.7
+eth2.r1     IN  A   1.108.0.0
+eth3.r1     IN  A   1.108.0.8
+dummy0.r1   IN  A   1.108.3.1
+
+eth0.r2     IN  A   2.21.0.1
+eth1.r2     IN  A   1.108.0.2
+eth2.r2     IN  A   1.108.0.1
+dummy0.r2   IN  A   1.108.3.2
+
+servers     IN  A   1.108.1.1
+eth1.r3     IN  A   1.108.0.3
+eth2.r3     IN  A   1.108.0.4
+eth3.r3     IN  A   1.108.0.9
+dummy0.r3   IN  A   1.108.3.3
+
+clients     IN  A   1.108.2.1
+eth1.r4     IN  A   1.108.0.6
+eth2.r4     IN  A   1.108.0.5
+dummy0.r4   IN  A   1.108.3.4

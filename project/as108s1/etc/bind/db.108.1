@@ -1,0 +1,15 @@
+$ORIGIN 108.1.in-addr.arpa.
+$TTL 86400
+@   IN  SOA ns.isp108.lab. admin.isp108.lab. (
+            2026092101 ; Serial
+            3600       ; Refresh
+            1800       ; Retry
+            604800     ; Expire
+            86400 )    ; Minimum TTL
+    IN  NS  ns.isp108.lab.
+
+; Server reverse records (1.108.1.0/24 subnet)
+2.1 IN  PTR ns.isp108.lab.
+4.1 IN  PTR www.isp108.lab.
+3.1 IN  PTR dhcpd.isp108.lab.
+1.1 IN  PTR servers.isp108.lab.

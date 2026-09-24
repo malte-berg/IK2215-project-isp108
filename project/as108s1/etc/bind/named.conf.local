@@ -1,0 +1,11 @@
+zone "isp108.lab" {
+    type master;
+    file "/etc/bind/db.isp108.lab";
+    allow-update { 1.108.1.3; }; # Permits DDNS updates from the DHCP server
+};
+
+zone "108.1.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.108.1";
+    allow-update { 1.108.1.3; };
+};
